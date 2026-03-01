@@ -1659,7 +1659,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   placementStartPoint: {fileID: 586621113}
-  blockPrefab: {fileID: 8447811002259142291, guid: 638dd2d47dc4524438d4e1a84f4a9f24, type: 3}
+  blockPrefab: {fileID: 6493902339187079218, guid: 7efcce3a362fcf8438c13b108e1e5ad4, type: 3}
 --- !u!1001 &1120474117
 PrefabInstance:
   m_ObjectHideFlags: 0
