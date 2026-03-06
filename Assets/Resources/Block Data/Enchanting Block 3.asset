@@ -15,7 +15,7 @@ MonoBehaviour:
   blockName: Enchant 3
   blockPrefab: {fileID: 6493902339187079218, guid: 56eb4ed1689b08747949099161fe0d37, type: 3}
   blockType: 3
-  blockGainRate: 100
+  blockGainAmount: 100
   blockGainTime: 30
   blockCost: 10000
   blockCostScaleType: 2

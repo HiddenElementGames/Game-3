@@ -15,7 +15,7 @@ MonoBehaviour:
   blockName: Wheat
   blockPrefab: {fileID: 6493902339187079218, guid: 7efcce3a362fcf8438c13b108e1e5ad4, type: 3}
   blockType: 1
-  blockGainRate: 1
+  blockGainAmount: 1
   blockGainTime: 10
   blockCost: 100
   blockCostScaleType: 2
