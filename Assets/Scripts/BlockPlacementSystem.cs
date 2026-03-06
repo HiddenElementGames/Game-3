@@ -8,7 +8,7 @@ public class BlockPlacementSystem : MonoBehaviour
 
     private void Update()
     {
-        if(Mouse.current.leftButton.wasPressedThisFrame)
+        if(Mouse.current.rightButton.wasPressedThisFrame)
         {
             PlaceBlock(blockPrefab);
         }  
