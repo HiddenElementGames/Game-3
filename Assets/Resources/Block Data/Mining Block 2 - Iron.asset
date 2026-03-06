@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BlockData
   blockName: Iron
   blockPrefab: {fileID: 6493902339187079218, guid: 949fa1fed653a2f42b9ea91390e5a58f, type: 3}
-  blockType: 1
+  blockType: 2
   blockGainRate: 10
   blockGainTime: 20
   blockCost: 1000

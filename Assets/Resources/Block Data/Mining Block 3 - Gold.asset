@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BlockData
   blockName: Gold
   blockPrefab: {fileID: 6493902339187079218, guid: 4ace1e5c0f9f66947b0dd471e3111887, type: 3}
-  blockType: 1
+  blockType: 2
   blockGainRate: 100
   blockGainTime: 30
   blockCost: 10000
