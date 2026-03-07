@@ -10,6 +10,7 @@ public class BlockData : ScriptableObject
     [SerializeField, Tooltip("The time interval at which the block generates resources or xp.")] private float blockGainTime;
     [SerializeField, Tooltip("The BASE cost to buy the block.")] private float blockCost;
     [SerializeField, Tooltip("The scale type for the block cost.\nNone: No scaling.\nLinear: Cost increases linearly.\nMultiplicative: Cost increases multiplicatively.\nExponential: Cost increases exponentially.")] private ScaleType blockCostScaleType;
+    [SerializeField, Tooltip("The sprite for the item display in the shop")] private Sprite blockSprite;
 
     public string BlockName { get { return blockName; } }
     public GameObject BlockPrefab { get { return blockPrefab; } }
@@ -18,4 +19,5 @@ public class BlockData : ScriptableObject
     public float BlockGainTime { get { return blockGainTime; } }
     public float BlockCost { get { return blockCost; } }
     public ScaleType BlockCostScaleType { get { return blockCostScaleType; } }
+    public Sprite BlockSprite { get { return blockSprite; } }
 }
