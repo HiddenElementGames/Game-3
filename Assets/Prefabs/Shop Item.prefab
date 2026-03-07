@@ -289,7 +289,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 5.9
+  m_fontSize: 62.6
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -345,7 +345,7 @@ GameObject:
   - component: {fileID: 670569607296154828}
   - component: {fileID: 5610351296491827862}
   - component: {fileID: 505969795718407657}
-  - component: {fileID: 381093395521208792}
+  - component: {fileID: 411210845243316415}
   m_Layer: 5
   m_Name: Shop Item
   m_TagString: Untagged
@@ -414,7 +414,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &381093395521208792
+--- !u!114 &411210845243316415
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -423,13 +423,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 4483171624602357215}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 184e0e7437dad1c4fbf833ea464692fe, type: 3}
+  m_Script: {fileID: 11500000, guid: be40586072eb0f545bf098b829bef704, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ShopItemSetupData
-  DisplayNameText: {fileID: 3478863091716556932}
-  PurchaseButton: {fileID: 3833819972682830095}
-  ItemImage: {fileID: 5045011700295355769}
-  ItemCostText: {fileID: 9200789965953126533}
+  m_EditorClassIdentifier: Assembly-CSharp::ShopItemSetup
+  blockData: {fileID: 11400000, guid: dee6ddc4e4029534e95414e2e16a3ceb, type: 2}
+  displayNameText: {fileID: 3478863091716556932}
+  purchaseButton: {fileID: 3833819972682830095}
+  itemImage: {fileID: 5045011700295355769}
+  itemCostText: {fileID: 9200789965953126533}
 --- !u!1 &5461894478064904514
 GameObject:
   m_ObjectHideFlags: 0
@@ -734,7 +735,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 18
+  m_fontSize: 73.05
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1

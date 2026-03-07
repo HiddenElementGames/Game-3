@@ -36,7 +36,7 @@ public class BlockPlacementSystem : MonoBehaviour
         if(Mouse.current.rightButton.wasPressedThisFrame && PlayerCanPlaceBlock())
         {
             PlaceBlock();
-        }  
+        }
     }
 
 	/// <summary>
