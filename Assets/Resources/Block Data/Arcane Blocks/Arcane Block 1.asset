@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 280a60a60dbcc254faf56b172972c590, type: 3}
+  m_Name: Arcane Block 1
+  m_EditorClassIdentifier: Assembly-CSharp::BlockData
+  blockName: Arcane V1
+  blockPrefab: {fileID: 6493902339187079218, guid: 8d95e90b65aff0443a350b9b72335743, type: 3}
+  blockType: 3
+  blockGainAmount: 1
+  blockGainTime: 10
+  blockCost: 100
+  blockCostScaleType: 2
+  blockSprite: {fileID: 21300000, guid: 6456d4a1aa953654e82b2b658a002101, type: 3}
