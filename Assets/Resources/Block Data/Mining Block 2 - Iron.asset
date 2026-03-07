@@ -19,3 +19,4 @@ MonoBehaviour:
   blockGainTime: 20
   blockCost: 1000
   blockCostScaleType: 2
+  blockSprite: {fileID: 21300000, guid: 18cf7027e4467d6449e3edfe874b4d8a, type: 3}

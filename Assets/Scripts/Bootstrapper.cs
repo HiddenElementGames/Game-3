@@ -8,6 +8,7 @@ public class Bootstrapper
     [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
     public static void Initialize()
     {
+        EventManager.Initialize();
         SceneManager.LoadSceneAsync(MANAGER_SCENE_INDEX, LoadSceneMode.Additive);
     }
 }

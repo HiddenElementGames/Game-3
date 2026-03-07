@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 /// <summary>
 /// Initializes and sets up the shop UI
@@ -10,8 +11,11 @@ public class InitializeShopUI : MonoBehaviour
 	/// <summary>
 	/// Start is called once before the first execution of Update after the MonoBehaviour is created
 	/// </summary>
-	void Start()
+	private IEnumerator Start()
     {
+        yield return new WaitForSeconds(0.1f);
+        yield return null;
+
         // set up a shop item for every block, at runtime
         foreach(BlockData blockData in BlockManager.Instance.BlockDatas)
         {

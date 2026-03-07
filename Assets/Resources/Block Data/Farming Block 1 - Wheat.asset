@@ -13,9 +13,10 @@ MonoBehaviour:
   m_Name: Farming Block 1 - Wheat
   m_EditorClassIdentifier: Assembly-CSharp::BlockData
   blockName: Wheat
-  blockPrefab: {fileID: 6493902339187079218, guid: 7efcce3a362fcf8438c13b108e1e5ad4, type: 3}
+  blockPrefab: {fileID: 6493902339187079218, guid: f54de6275f4ffff4696a651cc8f3fa2b, type: 3}
   blockType: 1
   blockGainAmount: 1
   blockGainTime: 10
   blockCost: 100
   blockCostScaleType: 2
+  blockSprite: {fileID: 21300000, guid: 73902fb371264d54abe9c42ecaa53438, type: 3}
