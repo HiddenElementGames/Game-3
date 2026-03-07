@@ -14,8 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BlockData
   blockName: Enchant 4
   blockPrefab: {fileID: 6493902339187079218, guid: a7f0a5c3996132547bc73daa6a568947, type: 3}
-  blockType: 1
-  blockGainRate: 1000
+  blockType: 3
+  blockGainAmount: 1000
   blockGainTime: 40
   blockCost: 100000
   blockCostScaleType: 2
+  blockSprite: {fileID: 21300000, guid: f9a641cc081925a47b13ec7c9b7d1aa5, type: 3}

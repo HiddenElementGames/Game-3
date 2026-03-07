@@ -14,8 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BlockData
   blockName: Coal
   blockPrefab: {fileID: 6493902339187079218, guid: 89ac074bf4774e945827ef3a88352f33, type: 3}
-  blockType: 1
-  blockGainRate: 1
+  blockType: 2
+  blockGainAmount: 1
   blockGainTime: 10
   blockCost: 100
   blockCostScaleType: 2
+  blockSprite: {fileID: 21300000, guid: c2aff3f132bdba7418d732b1e34984f5, type: 3}

@@ -1,0 +1,4 @@
+public enum CustomEventType
+{
+	BlockSelected,
+}

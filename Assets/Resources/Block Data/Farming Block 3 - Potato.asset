@@ -15,7 +15,8 @@ MonoBehaviour:
   blockName: Potato
   blockPrefab: {fileID: 6493902339187079218, guid: 7074bf6392f4ad04aa65735ea9662e21, type: 3}
   blockType: 1
-  blockGainRate: 100
+  blockGainAmount: 100
   blockGainTime: 30
   blockCost: 10000
   blockCostScaleType: 2
+  blockSprite: {fileID: 21300000, guid: 4ceb78422ff6c5b498e9ce6ae6c176e6, type: 3}
