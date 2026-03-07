@@ -207,7 +207,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9328ed5e31ba7204286d9ae365bd341d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  blockDatas: []
+  blockDatas:
+  - {fileID: 11400000, guid: c5058336398da014885989498581adb6, type: 2}
+  - {fileID: 11400000, guid: b03d269a88460dd4197dcd553d3fd463, type: 2}
+  - {fileID: 11400000, guid: 6511a8bdd307fb7439055821569874a4, type: 2}
+  - {fileID: 11400000, guid: 053f0b4c025463842a5f5f26802b2d25, type: 2}
+  - {fileID: 11400000, guid: dee6ddc4e4029534e95414e2e16a3ceb, type: 2}
+  - {fileID: 11400000, guid: 212cf7b57ca16164a8084fae9881fe0c, type: 2}
+  - {fileID: 11400000, guid: 3d093c37ee46c9f49b35907d60c8ea69, type: 2}
+  - {fileID: 11400000, guid: 22c0a2bc9ecb0834b8b1a99a791d2e73, type: 2}
+  - {fileID: 11400000, guid: 58f784a3f8aa03e4cb696931e7126262, type: 2}
+  - {fileID: 11400000, guid: 574207a8c6e8b7b41ac93cac279c50c0, type: 2}
 --- !u!1 &1280282001
 GameObject:
   m_ObjectHideFlags: 0
