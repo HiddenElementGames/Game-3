@@ -10,7 +10,7 @@ public class ResourceManager : MonoBehaviour
             { BlockType.None, 0 },
             { BlockType.Farming, 0 },
             { BlockType.Mining, 0 },
-            { BlockType.Enchanting, 0 } };
+            { BlockType.Arcane, 0 } };
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()

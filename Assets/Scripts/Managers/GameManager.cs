@@ -9,6 +9,8 @@ public class GameManager : MonoBehaviour
 
     private BlockData selectedBlock; // tracks which block the player currently has selected, for placement
 
+    public BlockData SelectedBlock {  get { return selectedBlock; } }
+
 	/// <summary>
 	/// Start is called once before the first execution of Update after the MonoBehaviour is created
 	/// </summary>
@@ -24,6 +26,7 @@ public class GameManager : MonoBehaviour
     {
         // subscribe to events
         EventManager.StartListening<BlockData>(CustomEventType.BlockSelected, OnBlockSelected);
+        EventManager.StartListening(CustomEventType.BlockPlaced, OnBlockPlaced);
     }
 
     /// <summary>
@@ -33,6 +36,7 @@ public class GameManager : MonoBehaviour
     {
         // unsubscribe from events
         EventManager.StopListening<BlockData>(CustomEventType.BlockSelected, OnBlockSelected);
+        EventManager.StopListening(CustomEventType.BlockPlaced, OnBlockPlaced);
     }
 
     /// <summary>
@@ -46,5 +50,13 @@ public class GameManager : MonoBehaviour
 
 		// passes the prefab along to the BlockPlacementSystem.cs
 		EventManager.Invoke(CustomEventType.BlockSelected, blockData.BlockPrefab);
+    }
+
+    /// <summary>
+    /// Called after a block is placed. Announces the type of block
+    /// </summary>
+    private void OnBlockPlaced()
+    {
+        EventManager.Invoke(CustomEventType.BlockPlaced, selectedBlock);
     }
 }

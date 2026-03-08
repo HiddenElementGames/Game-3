@@ -4,7 +4,7 @@ using UnityEngine.InputSystem;
 /// <summary>
 /// Opens/Closes the shop UI when the player presses the shop keybind
 /// </summary>
-public class PlayerShopKeybind : MonoBehaviour
+public class ShopKeybind : MonoBehaviour
 {
     [SerializeField] private GameObject shopCanvas;
 
@@ -13,9 +13,10 @@ public class PlayerShopKeybind : MonoBehaviour
     /// </summary>
     void Update()
     {
-        if(Keyboard.current.tabKey.wasPressedThisFrame)
+        if(Keyboard.current.tabKey.wasPressedThisFrame && shopCanvas.activeSelf == UIManager.Instance.IsMenuOpen)
         {
-            shopCanvas.SetActive(!shopCanvas.activeSelf);
+			shopCanvas.SetActive(!shopCanvas.activeSelf);
+            EventManager.Invoke(CustomEventType.MenuToggled);
         }
     }
 }
