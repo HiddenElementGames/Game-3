@@ -5,4 +5,7 @@ public enum CustomEventType
 	BlockPurchased,
 	MenuToggled,
 	BlockDeselected,
+	ResourcesAnnounced,
+	ResourcesRequested,
+	ShopCategorySwitched,
 }
