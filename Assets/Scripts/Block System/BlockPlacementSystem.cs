@@ -64,6 +64,7 @@ public class BlockPlacementSystem : MonoBehaviour
 			if (Physics.OverlapBox(spawnPosition, halfExtents).Length == 0)
             {
 				Instantiate(selectedBlock, spawnPosition, Quaternion.identity);
+				EventManager.Invoke(CustomEventType.BlockPlaced);
 			}
         }
     }
