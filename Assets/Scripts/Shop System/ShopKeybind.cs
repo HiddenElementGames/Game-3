@@ -4,7 +4,7 @@ using UnityEngine.InputSystem;
 /// <summary>
 /// Opens/Closes the shop UI when the player presses the shop keybind
 /// </summary>
-public class PlayerShopKeybind : MonoBehaviour
+public class ShopKeybind : MonoBehaviour
 {
     [SerializeField] private GameObject shopCanvas;
 
