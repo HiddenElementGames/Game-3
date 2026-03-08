@@ -4,4 +4,5 @@ public enum CustomEventType
 	BlockPlaced,
 	BlockPurchased,
 	MenuToggled,
+	BlockDeselected,
 }

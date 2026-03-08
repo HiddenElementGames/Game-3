@@ -16,7 +16,6 @@ public class ShopKeybind : MonoBehaviour
         if(Keyboard.current.tabKey.wasPressedThisFrame && shopCanvas.activeSelf == UIManager.Instance.IsMenuOpen)
         {
 			shopCanvas.SetActive(!shopCanvas.activeSelf);
-            EventManager.Invoke(CustomEventType.MenuToggled);
         }
     }
 }

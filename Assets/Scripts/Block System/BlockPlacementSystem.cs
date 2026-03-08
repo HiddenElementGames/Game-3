@@ -17,6 +17,7 @@ public class BlockPlacementSystem : MonoBehaviour
 	{
 		// subscribe to events
 		EventManager.StartListening<GameObject>(CustomEventType.BlockSelected, OnBlockSelected);
+		EventManager.StartListening(CustomEventType.BlockDeselected, OnBlockDeselected);
 	}
 
 	/// <summary>
@@ -26,6 +27,7 @@ public class BlockPlacementSystem : MonoBehaviour
 	{
 		// unsubscribe from events
 		EventManager.StopListening<GameObject>(CustomEventType.BlockSelected, OnBlockSelected);
+		EventManager.StopListening(CustomEventType.BlockDeselected, OnBlockDeselected);
 	}
 
 	/// <summary>
@@ -76,5 +78,10 @@ public class BlockPlacementSystem : MonoBehaviour
 	private void OnBlockSelected(GameObject selectedBlockPrefab)
 	{
 		selectedBlock = selectedBlockPrefab;
+	}
+
+	private void OnBlockDeselected()
+	{
+		selectedBlock = null;
 	}
 }
