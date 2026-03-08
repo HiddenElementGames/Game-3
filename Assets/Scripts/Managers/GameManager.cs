@@ -9,6 +9,8 @@ public class GameManager : MonoBehaviour
 
     private BlockData selectedBlock; // tracks which block the player currently has selected, for placement
 
+    public BlockData SelectedBlock {  get { return selectedBlock; } }
+
 	/// <summary>
 	/// Start is called once before the first execution of Update after the MonoBehaviour is created
 	/// </summary>
