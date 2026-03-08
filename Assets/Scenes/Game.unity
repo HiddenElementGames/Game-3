@@ -1460,6 +1460,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea860b62f7c5fc242a0d349457a6063c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UIMouseController
+  playerMovementParent: {fileID: 8906934279132777921}
 --- !u!4 &195743788 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5661782499218748747, guid: 7dc6c97465fcb614bbc1c2194ebafa3b, type: 3}
@@ -2372,6 +2373,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea860b62f7c5fc242a0d349457a6063c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UIMouseController
+  playerMovementParent: {fileID: 8906934279132777921}
 --- !u!4 &526239560 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5661782499218748747, guid: 7dc6c97465fcb614bbc1c2194ebafa3b, type: 3}
