@@ -13,9 +13,10 @@ public class PlayerShopKeybind : MonoBehaviour
     /// </summary>
     void Update()
     {
-        if(Keyboard.current.tabKey.wasPressedThisFrame)
+        if(Keyboard.current.tabKey.wasPressedThisFrame && shopCanvas.activeSelf == UIManager.Instance.IsMenuOpen)
         {
             shopCanvas.SetActive(!shopCanvas.activeSelf);
+            EventManager.Invoke(CustomEventType.MenuToggled);
         }
     }
 }
