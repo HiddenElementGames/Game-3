@@ -20,7 +20,7 @@ public class ShopItemSetup : MonoBehaviour
     {
 		this.name = "Shop Item: " + blockData.name;
         displayNameText.text = blockData.BlockName;
-        purchaseButton.onClick.AddListener(()=> EventManager.Invoke(CustomEventType.BlockSelected, blockData));
+        purchaseButton.onClick.AddListener(()=> EventManager.Invoke(CustomEventType.BlockPurchased, blockData));
         itemImage.sprite = blockData.BlockSprite;
         itemCostText.text = "Cost: " + blockData.BlockCost.ToString();
 
