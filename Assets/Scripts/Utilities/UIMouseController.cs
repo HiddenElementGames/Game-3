@@ -12,12 +12,14 @@ public class UIMouseController : MonoBehaviour
 		playerMovementParent.SetActive(false);
 		Cursor.lockState = CursorLockMode.None;
 		Cursor.visible = true;
-    }
+		EventManager.Invoke(CustomEventType.MenuToggled);
+	}
 
 	private void OnDisable()
 	{
 		playerMovementParent.SetActive(true);
 		Cursor.lockState = CursorLockMode.Locked;
 		Cursor.visible = false;
+		EventManager.Invoke(CustomEventType.MenuToggled);
 	}
 }

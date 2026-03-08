@@ -16,7 +16,6 @@ public class InventoryKeybind : MonoBehaviour
 		if ((Keyboard.current.eKey.wasPressedThisFrame || Keyboard.current.iKey.wasPressedThisFrame) && inventoryCanvas.activeSelf == UIManager.Instance.IsMenuOpen)
 		{
 			inventoryCanvas.SetActive(!inventoryCanvas.activeSelf);
-			EventManager.Invoke(CustomEventType.MenuToggled);
 		}
 	}
 }

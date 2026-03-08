@@ -4,9 +4,13 @@ using UnityEngine;
 /// <summary>
 /// Records the players inventory for their block counts
 /// </summary>
-public class Inventory : MonoBehaviour
+public class InventoryManager : MonoBehaviour
 {
+	public static InventoryManager Instance;
+
     private Dictionary<BlockData, int> blockCounts = new(); // inventory count for each block type
+
+	public Dictionary<BlockData, int> BlockCounts { get { return blockCounts; } }
 
 	/// <summary>
 	/// This function is called when the object becomes enabled and active.
@@ -26,6 +30,14 @@ public class Inventory : MonoBehaviour
 		// unsubscribe from events
 		EventManager.StopListening<BlockData>(CustomEventType.BlockPurchased, OnBlockPurchased);
 		EventManager.StopListening<BlockData>(CustomEventType.BlockPlaced, OnBlockPlaced);
+	}
+
+	/// <summary>
+	/// Start is called before the first frame update
+	/// </summary>
+	private void Start()
+	{
+		Instance = this;
 	}
 
 	/// <summary>
@@ -50,6 +62,7 @@ public class Inventory : MonoBehaviour
 		blockCounts[blockData]--;
 		if (blockCounts[blockData] == 0)
 		{
+			EventManager.Invoke(CustomEventType.BlockDeselected);
 			blockCounts.Remove(blockData);
 		}
 	}
