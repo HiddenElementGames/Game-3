@@ -17,6 +17,7 @@ public class ResourceManager : MonoBehaviour
     private void OnEnable()
     {
         EventManager.StartListening<BlockType>(CustomEventType.ResourcesRequested, OnResourcesRequested);
+        EventManager.StartListening<(BlockType, float)>(CustomEventType.ResourcesGenerated, OnResourcesGenerated);
     }
 
     /// <summary>
@@ -25,7 +26,8 @@ public class ResourceManager : MonoBehaviour
     private void OnDisable()
     {
         EventManager.StopListening<BlockType>(CustomEventType.ResourcesRequested, OnResourcesRequested);
-    }
+		EventManager.StopListening<(BlockType, float)>(CustomEventType.ResourcesGenerated, OnResourcesGenerated);
+	}
 
     /// <summary>
     /// Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -45,9 +47,9 @@ public class ResourceManager : MonoBehaviour
         AnnounceResourcesAvailable(blockType);
     }
 
-    public void GainResources(BlockType blockType, float gainAmount)
+    public void OnResourcesGenerated((BlockType blockType, float gainAmount) generatedResources)
     {
-        resourceAmounts[blockType] += gainAmount;
-        AnnounceResourcesAvailable(blockType);
+        resourceAmounts[generatedResources.blockType] += generatedResources.gainAmount;
+        AnnounceResourcesAvailable(generatedResources.blockType);
     }
 }

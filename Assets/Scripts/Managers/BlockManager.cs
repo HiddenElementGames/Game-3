@@ -59,7 +59,7 @@ public class BlockManager : MonoBehaviour
         while(true)
         {
             yield return blockGainIntervals[blockData];
-            ResourceManager.Instance.GainResources(blockData.BlockType, blockData.BlockGainAmount * blockCounts[blockData]);
+            EventManager.Invoke(CustomEventType.ResourcesGenerated, (blockData.BlockType, blockData.BlockGainAmount * blockCounts[blockData]));
         }
     }
 
