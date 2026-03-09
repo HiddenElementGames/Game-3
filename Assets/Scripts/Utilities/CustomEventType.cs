@@ -8,4 +8,5 @@ public enum CustomEventType
 	ResourcesAnnounced,
 	ResourcesRequested,
 	ShopCategorySwitched,
+	ResourcesGenerated,
 }
