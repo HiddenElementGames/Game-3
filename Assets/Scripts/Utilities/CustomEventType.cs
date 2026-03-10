@@ -9,4 +9,5 @@ public enum CustomEventType
 	ResourcesRequested,
 	ShopCategorySwitched,
 	ResourcesGenerated,
+	PrestigeAvailable,
 }

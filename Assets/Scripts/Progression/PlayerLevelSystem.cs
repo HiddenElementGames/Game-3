@@ -10,6 +10,8 @@ public class PlayerLevelSystem : MonoBehaviour
     private const float BASE_EXPERIENCE_FOR_LEVEL_UP = 500f;
     private const float EXPERIENCE_SCALING_AMOUNT_PER_LEVEL = 2f;
 
+    private const int MAX_LEVEL = 50;
+
     private void OnEnable()
     {
         EventManager.StartListening<(BlockType, float)>(CustomEventType.ResourcesGenerated, OnResourcesGenerated);
@@ -49,8 +51,15 @@ public class PlayerLevelSystem : MonoBehaviour
         float currentExperience = blockExperiences[blockType];
         if(currentExperience >= requiredExperience)
         {
-            blockLevels[blockType]++;
-            upgradePoints[blockType]++;
+            if (blockLevels[blockType] < MAX_LEVEL)
+            {
+				blockLevels[blockType]++;
+				upgradePoints[blockType]++;
+			}
+            else
+            {
+                EventManager.Invoke(CustomEventType.PrestigeAvailable, blockType);
+            }
         }
     }
 }
