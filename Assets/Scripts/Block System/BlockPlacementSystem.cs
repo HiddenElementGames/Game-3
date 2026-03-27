@@ -4,6 +4,7 @@ using UnityEngine.InputSystem;
 public class BlockPlacementSystem : MonoBehaviour
 {
     [SerializeField] private Transform placementStartPoint;
+	[SerializeField] private AudioSource blockPlacementSound;
 
     private GameObject selectedBlock = null;
 
@@ -65,6 +66,7 @@ public class BlockPlacementSystem : MonoBehaviour
 			// ensure the player is not in the way, before spawning the block
 			if (Physics.OverlapBox(spawnPosition, halfExtents).Length == 0)
             {
+				blockPlacementSound.PlayOneShot(blockPlacementSound.clip);
 				Instantiate(selectedBlock, spawnPosition, Quaternion.identity);
 				EventManager.Invoke(CustomEventType.BlockPlaced);
 			}
