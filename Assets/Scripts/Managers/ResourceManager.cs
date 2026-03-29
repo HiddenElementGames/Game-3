@@ -11,6 +11,8 @@ public class ResourceManager : MonoBehaviour
             { BlockType.Mining, 0 },
             { BlockType.Arcane, 0 } };
 
+    private const float WIN_AMOUNT = 10000;
+
     /// <summary>
     /// 
     /// </summary>
@@ -51,5 +53,27 @@ public class ResourceManager : MonoBehaviour
     {
         resourceAmounts[generatedResources.blockType] += generatedResources.gainAmount;
         AnnounceResourcesAvailable(generatedResources.blockType);
+        CheckForWinCondition();
+    }
+
+    private void CheckForWinCondition()
+    {
+        bool win = true;
+        foreach(float amount in resourceAmounts.Values)
+        {
+			if (amount < WIN_AMOUNT)
+			{
+                win = false;
+			}
+		}
+        if(win)
+        {
+            GameObject canvas = GameObject.FindGameObjectWithTag("Win Canvas");
+            foreach(Transform child in canvas.transform)
+            {
+                child.gameObject.SetActive(true);
+            }
+
+		}
     }
 }
