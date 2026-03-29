@@ -2,11 +2,10 @@ using UnityEngine;
 
 public class PlayerFallSafety : MonoBehaviour
 {
-    [SerializeField] private Vector3 resetPosition;
+	[SerializeField] private GameObject loseScreen;
 
 	private void OnTriggerEnter(Collider other)
 	{
-		Debug.Log("Hi");
-		other.transform.parent.position = resetPosition;
+		loseScreen.SetActive(true);
 	}
 }

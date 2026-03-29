@@ -6,6 +6,7 @@ TagManager:
   tags:
   - CinemachineTarget
   - Block
+  - Win Canvas
   layers:
   - Default
   - TransparentFX
